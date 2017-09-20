@@ -10,7 +10,7 @@ Module.register("MMM-googlemaps",{
 
     getDom: function() {
         Log.log("getDom" ,this.hidden);
-        if (!this.hidden) {
+       // if (!this.hidden) {
 	var fullyBuiltURL = this.config.baseurl + this.config.apikey + '&origin=' + this.config.origin + '&destination=' + this.config.destination;
   		var iframe = document.createElement("IFRAME");
 		iframe.style = this.config.style;
@@ -19,13 +19,13 @@ Module.register("MMM-googlemaps",{
 		iframe.src =  fullyBuiltURL;
               Log.log("iframe" ,iframe);
 		return iframe;
-       }
+      // }
 	},
 start: function() {
 		Log.info('Starting module: ' + this.name);
 
              Log.log("In map module",this.hidden);
-                this.hide(0);
+                //this.hide(0);
                 Log.log("In map module",this.hidden);
 	},
 notificationReceived: function(notification, payload, sender) {
